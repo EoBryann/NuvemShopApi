@@ -64,11 +64,21 @@ namespace NuvemShopApi
 
                 request.Parameters.Clear();
 
-                foreach (var p in anotherParameters)
-                    request.AddParameter(p);
 
                 //add required Parameters in request
                 request = AddRequiredParameters(request);
+                if (method == Method.POST)
+                {
+                    foreach (var p in anotherParameters)
+                        request.AddJsonBody(p.Value);
+                }
+                else
+                {
+
+                    foreach (var p in anotherParameters)
+                        request.AddParameter(p);
+                }
+
 
                 response = BuildClientRest().Execute(request);
 
@@ -125,16 +135,26 @@ namespace NuvemShopApi
         /// <returns></returns>
         private IRestRequest AddRequiredParameters(IRestRequest request)
         {
-            if (!request.Parameters.Any(p => p.Name.Equals("Authentication")))
+            if (request.Parameters == null)
+                return request;
+
+            bool hasAuth = request.Parameters.Any(p => p != null && !string.IsNullOrEmpty(p.Name) && p.Name.Equals("Authentication", StringComparison.OrdinalIgnoreCase));
+            if (!hasAuth)
                 request.AddParameter("Authentication", $"bearer {Credentials.AccessToken}", ParameterType.HttpHeader);
-            if (!request.Parameters.Any(p => p.Name.Equals("Content-Type")))
+
+            bool hasContentType = request.Parameters.Any(p => p != null && !string.IsNullOrEmpty(p.Name) && p.Name.Equals("Content-Type", StringComparison.OrdinalIgnoreCase));
+            if (!hasContentType)
                 request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
-            if (!request.Parameters.Any(p => p.Name.Equals("User-Agent")))
-                request.AddParameter("User-Agent", string.Format(UserAgentBase, UserAgent, Email),
-                    ParameterType.HttpHeader);
+
+            bool hasUserAgent = request.Parameters.Any(p => p != null && !string.IsNullOrEmpty(p.Name) && p.Name.Equals("User-Agent", StringComparison.OrdinalIgnoreCase));
+            if (!hasUserAgent)
+                request.AddParameter("User-Agent", string.Format(UserAgentBase, UserAgent, Email), ParameterType.HttpHeader);
+
+            // Não adicionar ou remover parâmetros do corpo da requisição aqui (RequestBody)
 
             return request;
         }
+
 
         private IRestClient BuildClientRest()
         {
