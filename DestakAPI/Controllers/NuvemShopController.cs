@@ -208,7 +208,11 @@ public class NuvemShopController : ControllerBase
                 stock_management = true,
                 promotional_price = produto.PrecoPromocional,
                 stock = int.TryParse(produto.Estoque, out var estoque) ? estoque : 0,
-                weight = produto.PesoKg,
+                 weight = produto.PesoKg,
+    height = produto.AlturaCm,
+    width  = produto.LarguraCm,
+    depth  = produto.ComprimentoCm,
+
                 cost = produto.Custo,
                 sku = produto.Sku,
                 // Pode adicionar dimensões se disponível: height, width, depth
