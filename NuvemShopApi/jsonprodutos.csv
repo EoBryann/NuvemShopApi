@@ -1,0 +1,279 @@
+﻿JToken;JToken._parent;JToken._previous;JToken._next;JToken._annotations;JToken.Parent;JToken.Root;JToken.Type;JToken.HasValues;JToken.Next;JToken.Previous;JToken.Path;JToken.First;JToken.Last
+"[""id"": 286602788, ""name"": {
+  ""pt"": ""LUMINÁRIA REDONDA - SAFARI | L109""
+}...]";[...];"";"[""id"": 290442611, ""name"": {
+  ""pt"": ""Luminária Bola de Futebol""
+}...]";"";[...];[...];Object;True;"[""id"": 290442611, ""name"": {
+  ""pt"": ""Luminária Bola de Futebol""
+}...]";"";[0];[286602788];[...]
+"[""id"": 290442611, ""name"": {
+  ""pt"": ""Luminária Bola de Futebol""
+}...]";[...];"[""id"": 286602788, ""name"": {
+  ""pt"": ""LUMINÁRIA REDONDA - SAFARI | L109""
+}...]";"[""id"": 290442987, ""name"": {
+  ""pt"": ""Luminária de Borboleta""
+}...]";"";[...];[...];Object;True;"[""id"": 290442987, ""name"": {
+  ""pt"": ""Luminária de Borboleta""
+}...]";"[""id"": 286602788, ""name"": {
+  ""pt"": ""LUMINÁRIA REDONDA - SAFARI | L109""
+}...]";[1];[290442611];[...]
+"[""id"": 290442987, ""name"": {
+  ""pt"": ""Luminária de Borboleta""
+}...]";[...];"[""id"": 290442611, ""name"": {
+  ""pt"": ""Luminária Bola de Futebol""
+}...]";"[""id"": 290443396, ""name"": {
+  ""pt"": ""Luminária: Câmera""
+}...]";"";[...];[...];Object;True;"[""id"": 290443396, ""name"": {
+  ""pt"": ""Luminária: Câmera""
+}...]";"[""id"": 290442611, ""name"": {
+  ""pt"": ""Luminária Bola de Futebol""
+}...]";[2];[290442987];[...]
+"[""id"": 290443396, ""name"": {
+  ""pt"": ""Luminária: Câmera""
+}...]";[...];"[""id"": 290442987, ""name"": {
+  ""pt"": ""Luminária de Borboleta""
+}...]";"[""id"": 290681090, ""name"": {
+  ""pt"": ""Luminária Dente""
+}...]";"";[...];[...];Object;True;"[""id"": 290681090, ""name"": {
+  ""pt"": ""Luminária Dente""
+}...]";"[""id"": 290442987, ""name"": {
+  ""pt"": ""Luminária de Borboleta""
+}...]";[3];[290443396];[...]
+"[""id"": 290681090, ""name"": {
+  ""pt"": ""Luminária Dente""
+}...]";[...];"[""id"": 290443396, ""name"": {
+  ""pt"": ""Luminária: Câmera""
+}...]";"[""id"": 290681196, ""name"": {
+  ""pt"": ""Luminária Terra""
+}...]";"";[...];[...];Object;True;"[""id"": 290681196, ""name"": {
+  ""pt"": ""Luminária Terra""
+}...]";"[""id"": 290443396, ""name"": {
+  ""pt"": ""Luminária: Câmera""
+}...]";[4];[290681090];[[]]
+"[""id"": 290681196, ""name"": {
+  ""pt"": ""Luminária Terra""
+}...]";[...];"[""id"": 290681090, ""name"": {
+  ""pt"": ""Luminária Dente""
+}...]";"[""id"": 290681311, ""name"": {
+  ""pt"": ""Luminária Spider-Man""
+}...]";"";[...];[...];Object;True;"[""id"": 290681311, ""name"": {
+  ""pt"": ""Luminária Spider-Man""
+}...]";"[""id"": 290681090, ""name"": {
+  ""pt"": ""Luminária Dente""
+}...]";[5];[290681196];[...]
+"[""id"": 290681311, ""name"": {
+  ""pt"": ""Luminária Spider-Man""
+}...]";[...];"[""id"": 290681196, ""name"": {
+  ""pt"": ""Luminária Terra""
+}...]";"[""id"": 290681377, ""name"": {
+  ""pt"": ""Luminária Palma""
+}...]";"";[...];[...];Object;True;"[""id"": 290681377, ""name"": {
+  ""pt"": ""Luminária Palma""
+}...]";"[""id"": 290681196, ""name"": {
+  ""pt"": ""Luminária Terra""
+}...]";[6];[290681311];[...]
+"[""id"": 290681377, ""name"": {
+  ""pt"": ""Luminária Palma""
+}...]";[...];"[""id"": 290681311, ""name"": {
+  ""pt"": ""Luminária Spider-Man""
+}...]";"[""id"": 290681797, ""name"": {
+  ""pt"": ""Luminária 3D Moto Chopper""
+}...]";"";[...];[...];Object;True;"[""id"": 290681797, ""name"": {
+  ""pt"": ""Luminária 3D Moto Chopper""
+}...]";"[""id"": 290681311, ""name"": {
+  ""pt"": ""Luminária Spider-Man""
+}...]";[7];[290681377];[...]
+"[""id"": 290681797, ""name"": {
+  ""pt"": ""Luminária 3D Moto Chopper""
+}...]";[...];"[""id"": 290681377, ""name"": {
+  ""pt"": ""Luminária Palma""
+}...]";"[""id"": 290682048, ""name"": {
+  ""pt"": ""Luminária 3D Moto Custom""
+}...]";"";[...];[...];Object;True;"[""id"": 290682048, ""name"": {
+  ""pt"": ""Luminária 3D Moto Custom""
+}...]";"[""id"": 290681377, ""name"": {
+  ""pt"": ""Luminária Palma""
+}...]";[8];[290681797];[...]
+"[""id"": 290682048, ""name"": {
+  ""pt"": ""Luminária 3D Moto Custom""
+}...]";[...];"[""id"": 290681797, ""name"": {
+  ""pt"": ""Luminária 3D Moto Chopper""
+}...]";"[""id"": 290682136, ""name"": {
+  ""pt"": ""Luminária Patrulha Canina""
+}...]";"";[...];[...];Object;True;"[""id"": 290682136, ""name"": {
+  ""pt"": ""Luminária Patrulha Canina""
+}...]";"[""id"": 290681797, ""name"": {
+  ""pt"": ""Luminária 3D Moto Chopper""
+}...]";[9];[290682048];[...]
+"[""id"": 290682136, ""name"": {
+  ""pt"": ""Luminária Patrulha Canina""
+}...]";[...];"[""id"": 290682048, ""name"": {
+  ""pt"": ""Luminária 3D Moto Custom""
+}...]";"[""id"": 290682262, ""name"": {
+  ""pt"": ""Luminária Sistema Solar""
+}...]";"";[...];[...];Object;True;"[""id"": 290682262, ""name"": {
+  ""pt"": ""Luminária Sistema Solar""
+}...]";"[""id"": 290682048, ""name"": {
+  ""pt"": ""Luminária 3D Moto Custom""
+}...]";[10];[290682136];[...]
+"[""id"": 290682262, ""name"": {
+  ""pt"": ""Luminária Sistema Solar""
+}...]";[...];"[""id"": 290682136, ""name"": {
+  ""pt"": ""Luminária Patrulha Canina""
+}...]";"[""id"": 290682577, ""name"": {
+  ""pt"": ""Luminária Navio Veleiro""
+}...]";"";[...];[...];Object;True;"[""id"": 290682577, ""name"": {
+  ""pt"": ""Luminária Navio Veleiro""
+}...]";"[""id"": 290682136, ""name"": {
+  ""pt"": ""Luminária Patrulha Canina""
+}...]";[11];[290682262];[...]
+"[""id"": 290682577, ""name"": {
+  ""pt"": ""Luminária Navio Veleiro""
+}...]";[...];"[""id"": 290682262, ""name"": {
+  ""pt"": ""Luminária Sistema Solar""
+}...]";"[""id"": 290683179, ""name"": {
+  ""pt"": ""Luminária Serviço Social""
+}...]";"";[...];[...];Object;True;"[""id"": 290683179, ""name"": {
+  ""pt"": ""Luminária Serviço Social""
+}...]";"[""id"": 290682262, ""name"": {
+  ""pt"": ""Luminária Sistema Solar""
+}...]";[12];[290682577];[...]
+"[""id"": 290683179, ""name"": {
+  ""pt"": ""Luminária Serviço Social""
+}...]";[...];"[""id"": 290682577, ""name"": {
+  ""pt"": ""Luminária Navio Veleiro""
+}...]";"[""id"": 290683246, ""name"": {
+  ""pt"": ""Luminária Motocross""
+}...]";"";[...];[...];Object;True;"[""id"": 290683246, ""name"": {
+  ""pt"": ""Luminária Motocross""
+}...]";"[""id"": 290682577, ""name"": {
+  ""pt"": ""Luminária Navio Veleiro""
+}...]";[13];[290683179];[...]
+"[""id"": 290683246, ""name"": {
+  ""pt"": ""Luminária Motocross""
+}...]";[...];"[""id"": 290683179, ""name"": {
+  ""pt"": ""Luminária Serviço Social""
+}...]";"[""id"": 290683352, ""name"": {
+  ""pt"": ""Luminária TREX""
+}...]";"";[...];[...];Object;True;"[""id"": 290683352, ""name"": {
+  ""pt"": ""Luminária TREX""
+}...]";"[""id"": 290683179, ""name"": {
+  ""pt"": ""Luminária Serviço Social""
+}...]";[14];[290683246];[...]
+"[""id"": 290683352, ""name"": {
+  ""pt"": ""Luminária TREX""
+}...]";[...];"[""id"": 290683246, ""name"": {
+  ""pt"": ""Luminária Motocross""
+}...]";"[""id"": 290683512, ""name"": {
+  ""pt"": ""Luminária Lilo & Stitch""
+}...]";"";[...];[...];Object;True;"[""id"": 290683512, ""name"": {
+  ""pt"": ""Luminária Lilo & Stitch""
+}...]";"[""id"": 290683246, ""name"": {
+  ""pt"": ""Luminária Motocross""
+}...]";[15];[290683352];[...]
+"[""id"": 290683512, ""name"": {
+  ""pt"": ""Luminária Lilo & Stitch""
+}...]";[...];"[""id"": 290683352, ""name"": {
+  ""pt"": ""Luminária TREX""
+}...]";"[""id"": 290683742, ""name"": {
+  ""pt"": ""Luminária LogoTipo""
+}...]";"";[...];[...];Object;True;"[""id"": 290683742, ""name"": {
+  ""pt"": ""Luminária LogoTipo""
+}...]";"[""id"": 290683352, ""name"": {
+  ""pt"": ""Luminária TREX""
+}...]";[16];[290683512];[...]
+"[""id"": 290683742, ""name"": {
+  ""pt"": ""Luminária LogoTipo""
+}...]";[...];"[""id"": 290683512, ""name"": {
+  ""pt"": ""Luminária Lilo & Stitch""
+}...]";"[""id"": 290683964, ""name"": {
+  ""pt"": ""Luminária Controle PS4""
+}...]";"";[...];[...];Object;True;"[""id"": 290683964, ""name"": {
+  ""pt"": ""Luminária Controle PS4""
+}...]";"[""id"": 290683512, ""name"": {
+  ""pt"": ""Luminária Lilo & Stitch""
+}...]";[17];[290683742];[...]
+"[""id"": 290683964, ""name"": {
+  ""pt"": ""Luminária Controle PS4""
+}...]";[...];"[""id"": 290683742, ""name"": {
+  ""pt"": ""Luminária LogoTipo""
+}...]";"[""id"": 290684402, ""name"": {
+  ""pt"": ""Luminária Nossa Senhora Aparecida""
+}...]";"";[...];[...];Object;True;"[""id"": 290684402, ""name"": {
+  ""pt"": ""Luminária Nossa Senhora Aparecida""
+}...]";"[""id"": 290683742, ""name"": {
+  ""pt"": ""Luminária LogoTipo""
+}...]";[18];[290683964];[...]
+"[""id"": 290684402, ""name"": {
+  ""pt"": ""Luminária Nossa Senhora Aparecida""
+}...]";[...];"[""id"": 290683964, ""name"": {
+  ""pt"": ""Luminária Controle PS4""
+}...]";"[""id"": 290684520, ""name"": {
+  ""pt"": ""Luminária Camisa De Futebol""
+}...]";"";[...];[...];Object;True;"[""id"": 290684520, ""name"": {
+  ""pt"": ""Luminária Camisa De Futebol""
+}...]";"[""id"": 290683964, ""name"": {
+  ""pt"": ""Luminária Controle PS4""
+}...]";[19];[290684402];[...]
+"[""id"": 290684520, ""name"": {
+  ""pt"": ""Luminária Camisa De Futebol""
+}...]";[...];"[""id"": 290684402, ""name"": {
+  ""pt"": ""Luminária Nossa Senhora Aparecida""
+}...]";"[""id"": 290684640, ""name"": {
+  ""pt"": ""Luminária Celebro""
+}...]";"";[...];[...];Object;True;"[""id"": 290684640, ""name"": {
+  ""pt"": ""Luminária Celebro""
+}...]";"[""id"": 290684402, ""name"": {
+  ""pt"": ""Luminária Nossa Senhora Aparecida""
+}...]";[20];[290684520];[...]
+"[""id"": 290684640, ""name"": {
+  ""pt"": ""Luminária Celebro""
+}...]";[...];"[""id"": 290684520, ""name"": {
+  ""pt"": ""Luminária Camisa De Futebol""
+}...]";"[""id"": 290684778, ""name"": {
+  ""pt"": ""Luminária Cesta De Basquete""
+}...]";"";[...];[...];Object;True;"[""id"": 290684778, ""name"": {
+  ""pt"": ""Luminária Cesta De Basquete""
+}...]";"[""id"": 290684520, ""name"": {
+  ""pt"": ""Luminária Camisa De Futebol""
+}...]";[21];[290684640];[...]
+"[""id"": 290684778, ""name"": {
+  ""pt"": ""Luminária Cesta De Basquete""
+}...]";[...];"[""id"": 290684640, ""name"": {
+  ""pt"": ""Luminária Celebro""
+}...]";"[""id"": 290685011, ""name"": {
+  ""pt"": ""Luminária Corações Duplos""
+}...]";"";[...];[...];Object;True;"[""id"": 290685011, ""name"": {
+  ""pt"": ""Luminária Corações Duplos""
+}...]";"[""id"": 290684640, ""name"": {
+  ""pt"": ""Luminária Celebro""
+}...]";[22];[290684778];[...]
+"[""id"": 290685011, ""name"": {
+  ""pt"": ""Luminária Corações Duplos""
+}...]";[...];"[""id"": 290684778, ""name"": {
+  ""pt"": ""Luminária Cesta De Basquete""
+}...]";"[""id"": 290685148, ""name"": {
+  ""pt"": ""Luminária Iron Man""
+}...]";"";[...];[...];Object;True;"[""id"": 290685148, ""name"": {
+  ""pt"": ""Luminária Iron Man""
+}...]";"[""id"": 290684778, ""name"": {
+  ""pt"": ""Luminária Cesta De Basquete""
+}...]";[23];[290685011];[...]
+"[""id"": 290685148, ""name"": {
+  ""pt"": ""Luminária Iron Man""
+}...]";[...];"[""id"": 290685011, ""name"": {
+  ""pt"": ""Luminária Corações Duplos""
+}...]";"[""id"": 291908936, ""name"": {
+  ""pt"": ""LUMINÁRIA - BORBOLETA | L1001""
+}...]";"";[...];[...];Object;True;"[""id"": 291908936, ""name"": {
+  ""pt"": ""LUMINÁRIA - BORBOLETA | L1001""
+}...]";"[""id"": 290685011, ""name"": {
+  ""pt"": ""Luminária Corações Duplos""
+}...]";[24];[290685148];[...]
+"[""id"": 291908936, ""name"": {
+  ""pt"": ""LUMINÁRIA - BORBOLETA | L1001""
+}...]";[...];"[""id"": 290685148, ""name"": {
+  ""pt"": ""Luminária Iron Man""
+}...]";"";"";[...];[...];Object;True;"";"[""id"": 290685148, ""name"": {
+  ""pt"": ""Luminária Iron Man""
+}...]";[25];[291908936];[...]
