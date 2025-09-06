@@ -1,4 +1,5 @@
 ﻿
+using DestakAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using NuvemShopApi;
 using RestSharp;
@@ -59,6 +60,40 @@ public class NuvemShopController : ControllerBase
         //Console.WriteLine("Consulta feita");
         //Console.ReadLine();
         return Ok(retorno);
+    }
+
+
+    [HttpPost("InsereProdutosViaHtml")]
+    public async  Task<IActionResult> InsereProdutosViaHtml(IFormFile fonteDados)
+    {
+
+        var apiNuvem = new ClientNuvemShop("Bryanporto02@GMAIL.COM", "DestakAPP", GetFullCredentials());
+
+        if (fonteDados == null ||fonteDados.Length == 0)
+            return BadRequest("Arquivo fonteDados não enviado.");
+
+        string fonteDadosContent;
+        using (var reader = new StreamReader(fonteDados.OpenReadStream(), Encoding.UTF8))
+        {
+            fonteDadosContent = await reader.ReadToEndAsync();
+        }
+
+        // Regex para extrair todos os <script type="application/ld+json" ...> ... </script> blocos que contenham o JSON
+        var regex = new Regex(
+            @"<script\s+type=""application/ld\+json""\s+data-component=""structured-data\.item"">\s*(.*?)\s*</script>",
+            RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+        var matches = regex.Matches(fonteDadosContent);
+
+        var produtos = new List<JsonElement>();
+
+
+
+
+        var retorno = apiNuvem.PostData<dynamic>("/products");
+
+       
+        return Ok();
     }
 
     internal static CredentialsNuvemShop GetFullCredentials()
