@@ -1,19 +1,20 @@
 ﻿
 using DestakAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NuvemShopApi;
 using RestSharp;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Generic;
+using System.IO;
 using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 [ApiController]
 [Route("[controller]")]
@@ -71,6 +72,9 @@ public class NuvemShopController : ControllerBase
     [HttpPost("InsereProdutosViaHtml")]
     public async Task<IActionResult> InsereProdutosViaHtml(IFormFile fonteDados, [FromQuery] List<int> categoriaIds)
     {
+
+        string categoriaSKU = "LumináriaPersonalizada";
+        int IdSKU = 0;
         var apiNuvem = new ClientNuvemShop("Bryanporto02@GMAIL.COM", "DestakAPP", GetFullCredentials());
 
         if (fonteDados == null || fonteDados.Length == 0)
@@ -122,11 +126,13 @@ public class NuvemShopController : ControllerBase
             itemProduto.LarguraCm = "9.00";
             itemProduto.ComprimentoCm = "15.00";
             itemProduto.Estoque = "42";
-            itemProduto.Sku = "";
+            itemProduto.Sku = categoriaSKU + IdSKU;
+            IdSKU++;
+
             itemProduto.CodigoBarras = "";
             itemProduto.ExibirNaLoja = "Sim";
             itemProduto.FreteGratis = "Não";
-            itemProduto.Descricao = "<h1 style=\"color: #ea2f99;\">🛋️ <span style=\"color: #ffffff;\">Descri&ccedil;&atilde;o do Produto</span></h1>\r\n<p><span style=\"color: #551757;\"><strong>Prazo de Produ&ccedil;&atilde;o:</strong></span> 2 a 3 dias &uacute;teis.</p>\r\n<p><span style=\"color: #551757;\"><strong>Medidas:</strong></span> 20cm de altura x 15cm de largura</p>\r\n<p><span style=\"color: #551757;\"><strong>Funcionamento:</strong></span> Cabo USB para Energia el&eacute;trica <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e/ou Pilhas <strong><span style=\"color: #551757;\">(N&Acirc;O INCLUSAS)</span></strong> .<br /><br /><span style=\"color: #f1c40f;\"><strong data-start=\"108\" data-end=\"120\"><span style=\"color: #e03e2d;\">Aten&ccedil;&atilde;o</span><span style=\"color: #ffffff;\">:</span></strong><span style=\"color: #ffffff;\"> Ao utilizar pilhas,</span> <span style=\"color: #e03e2d;\"><strong data-start=\"141\" data-end=\"167\">n&atilde;o conecte o cabo USB</strong></span><span style=\"color: #ffffff;\">, para evitar sobrecarga e poss&iacute;veis danos ao equipamento.</span></span></p>\r\n<h2 style=\"color: #ea2f99;\">✨ <span style=\"color: #ffffff;\">Personaliza&ccedil;&atilde;o Exclusiva</span></h2>\r\n<p data-start=\"80\" data-end=\"479\"><span style=\"color: #551757;\"><strong data-start=\"117\" data-end=\"155\">D&ecirc; um toque &uacute;nico &agrave; sua lumin&aacute;ria!</strong></span> Personalize com at&eacute; 3 nomes sem custo extra e, se desejar, adicione uma frase especial logo abaixo &mdash; tornando o produto ainda mais marcante e cheio de significado. Para isso, &eacute; s&oacute; preencher o campo de personaliza&ccedil;&atilde;o localizado abaixo da imagem do item. Nossa equipe cuidar&aacute; de tudo com carinho! Uma maneira incr&iacute;vel de criar um presente exclusivo e inesquec&iacute;vel.</p>\r\n<h2 style=\"color: #ea2f99;\">💡 <span style=\"color: #ffffff;\">Por que escolher nossa lumin&aacute;ria?</span></h2>\r\n<p><span style=\"color: #551757;\"><strong>Mais do que um simples item decorativo</strong></span>, nossa lumin&aacute;ria representa afeto e bem-estar. Ideal para presentear futuras mam&atilde;es, celebrar a chegada de um beb&ecirc; ou compor espa&ccedil;os infantis com charme, ela preenche o ambiente com uma luz serena e um clima envolvente. Com um design pensado nos m&iacute;nimos detalhes, transmite ternura, leveza e bom gosto &mdash; valorizando cada instante de forma &uacute;nica.</p>\r\n<h2 style=\"color: #ea2f99;\">💤 <span style=\"color: #ffffff;\">Lumin&aacute;ria Gravada com o Nome</span></h2>\r\n<p data-start=\"148\" data-end=\"632\"><span style=\"color: #551757;\"><strong>Imagine o cantinho do beb&ecirc;</strong></span> iluminado por uma pe&ccedil;a cheia de encanto, feita para surpreender. Produzida artesanalmente pela <span style=\"color: #551757;\"><strong data-start=\"270\" data-end=\"295\">Destak Personalizados</strong></span>, nossa lumin&aacute;ria re&uacute;ne eleg&acirc;ncia, suavidade e delicadeza. Com acabamento refinado e produ&ccedil;&atilde;o cuidadosa, ela transforma o espa&ccedil;o com calor e beleza. Mais do que iluminar, ela conquista pela presen&ccedil;a marcante, tornando-se um detalhe especial na decora&ccedil;&atilde;o. Um presente funcional e afetivo, feito para tornar cada momento ainda mais m&aacute;gico.</p>\r\n<h2 style=\"color: #ea2f99;\">🎁 <span style=\"color: #ffffff;\">O presente perfeito</span></h2>\r\n<p><span style=\"color: #551757;\"><strong>Se a inten&ccedil;&atilde;o &eacute; surpreender</strong></span> com algo bonito, pr&aacute;tico e cheio de emo&ccedil;&atilde;o, nossa lumin&aacute;ria personalizada &eacute; a escolha perfeita. Seu visual encantador, a luz acolhedora e a possibilidade de incluir nomes ou frases especiais tornam cada pe&ccedil;a &uacute;nica. Ideal para celebrar anivers&aacute;rios, maternidade, ch&aacute;s ou momentos marcantes, esse presente emociona e cria mem&oacute;rias que permanecem no cora&ccedil;&atilde;o.</p>";
+            itemProduto.Descricao = "<h1 style=\"color: #ea2f99;\">🛋️ <span style=\"color: #ffffff;\">Descri&ccedil;&atilde;o do Produto</span></h1>\r\n<p><span style=\"color: #551757;\"><strong>Prazo de Produ&ccedil;&atilde;o:</strong></span> 2 a 3 dias &uacute;teis.</p>\r\n<p><span style=\"color: #551757;\"><strong>Medidas:</strong></span> 20cm de altura x 15cm de largura</p>\r\n<p><span style=\"color: #551757;\"><strong>Funcionamento:</strong></span> Cabo USB para Energia el&eacute;trica <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e/ou Pilhas <strong><span style=\"color: #551757;\">(N&Acirc;O INCLUSAS)</span></strong> .<br /><br /><span style=\"color: #f1c40f;\"><strong data-start=\"108\" data-end=\"120\"><span style=\"color: #e03e2d;\">Aten&ccedil;&atilde;o</span><span style=\"color: #ffffff;\">:</span></strong><span style=\"color: #ffffff;\"> Ao utilizar pilhas,</span> <span style=\"color: #e03e2d;\"><strong data-start=\"141\" data-end=\"167\">n&atilde;o conecte o cabo USB</strong></span><span style=\"color: #ffffff;\">, para evitar sobrecarga e poss&iacute;veis danos ao equipamento.</span></span></p>\r\n<h2 style=\"color: #ea2f99;\">✨ <span style=\"color: #ffffff;\">Personaliza&ccedil;&atilde;o Exclusiva</span></h2>\r\n<p data-start=\"80\" data-end=\"479\"><span style=\"color: #551757;\"><strong data-start=\"117\" data-end=\"155\">D&ecirc; um toque &uacute;nico &agrave; sua lumin&aacute;ria!</strong></span> Personalize com at&eacute; 3 nomes sem custo extra e, se desejar, adicione uma frase especial logo abaixo &mdash; tornando o produto ainda mais marcante e cheio de significado. Para isso, &eacute; s&oacute; preencher o campo de personaliza&ccedil;&atilde;o localizado abaixo da imagem do item. Nossa equipe cuidar&aacute; de tudo com carinho! Uma maneira incr&iacute;vel de criar um presente exclusivo e inesquec&iacute;vel.</p>\r\n<h2 style=\"color: #ea2f99;\">💡 <span style=\"color: #ffffff;\">Por que escolher nossa lumin&aacute;ria?</span></h2>\r\n<p><span style=\"color: #551757;\"><strong>Mais do que um simples item decorativo</strong></span>, nossa lumin&aacute;ria representa afeto e bem-estar. Ideal para presentear futuras mam&atilde;es, celebrar a chegada de um beb&ecirc; ou compor espa&ccedil;os infantis com charme, ela preenche o ambiente com uma luz serena e um clima envolvente. Com um design pensado nos m&iacute;nimos detalhes, transmite ternura, leveza e bom gosto &mdash; valorizando cada instante de forma &uacute;nica.</p>\r\n<h2 style=\"color: #ea2f99;\"> <span style=\"color: #ffffff;\">Lumin&aacute;ria Gravada com o Nome</span></h2>\r\n<p data-start=\"148\" data-end=\"632\"><span style=\"color: #551757;\"><strong>Imagine o cantinho do beb&ecirc;</strong></span> iluminado por uma pe&ccedil;a cheia de encanto, feita para surpreender. Produzida artesanalmente pela <span style=\"color: #551757;\"><strong data-start=\"270\" data-end=\"295\">Destak Personalizados</strong></span>, nossa lumin&aacute;ria re&uacute;ne eleg&acirc;ncia, suavidade e delicadeza. Com acabamento refinado e produ&ccedil;&atilde;o cuidadosa, ela transforma o espa&ccedil;o com calor e beleza. Mais do que iluminar, ela conquista pela presen&ccedil;a marcante, tornando-se um detalhe especial na decora&ccedil;&atilde;o. Um presente funcional e afetivo, feito para tornar cada momento ainda mais m&aacute;gico.</p>\r\n<h2 style=\"color: #ea2f99;\">🎁 <span style=\"color: #ffffff;\">O presente perfeito</span></h2>\r\n<p><span style=\"color: #551757;\"><strong>Se a inten&ccedil;&atilde;o &eacute; surpreender</strong></span> com algo bonito, pr&aacute;tico e cheio de emo&ccedil;&atilde;o, nossa lumin&aacute;ria personalizada &eacute; a escolha perfeita. Seu visual encantador, a luz acolhedora e a possibilidade de incluir nomes ou frases especiais tornam cada pe&ccedil;a &uacute;nica. Ideal para celebrar anivers&aacute;rios, maternidade, ch&aacute;s ou momentos marcantes, esse presente emociona e cria mem&oacute;rias que permanecem no cora&ccedil;&atilde;o.</p>";
             itemProduto.Tags = "";
             itemProduto.TituloSEO = "";
             itemProduto.DescricaoSEO = "";
@@ -159,17 +165,22 @@ public class NuvemShopController : ControllerBase
 
 
 
-    // Tornar este método privado para que não seja exposto como action HTTP
     private ProductPostModel ConverterParaProductPostModel(Produto produto, List<int> categoriaIds, string videoUrl = "")
     {
+        var estoque = int.Parse(produto.Estoque);
         return new ProductPostModel
         {
-            attributes = new List<ProductAttribute>(), // Pode popular se tiver atributos específicos
+            
+
+            attributes = new List<AttributeModel>
+            {
+                new AttributeModel { pt = "Cores" }
+            },
             categories = categoriaIds,
-            created_at = null, // preencher se desejar
+            created_at = null,
             description = new NomeMultilanguage
             {
-                en = produto.Descricao, // se tiver multilínguas, adaptar aqui
+                en = produto.Descricao,
                 es = produto.Descricao,
                 pt = produto.Descricao
             },
@@ -179,14 +190,13 @@ public class NuvemShopController : ControllerBase
                 es = GerarIdentificadorUrl(produto.NomepUrl),
                 pt = GerarIdentificadorUrl(produto.NomepUrl)
             },
-            id = null, // novo produto, id não definido
+            id = null,
             images = new List<Image>
         {
             new Image { src = produto.ImgUrl },
             new Image { src = "https://dcdn-us.mitiendanube.com/stores/006/563/772/products/foto-cores-rgb-1de59c7d81392b4ed917570102583683-1024-1024.webp" },
             new Image { src = "https://dcdn-us.mitiendanube.com/stores/006/563/772/products/base-branca-b4-7-cores-7ee0e5ccb3f4de466d17570093157526-1024-1024.webp" },
             new Image { src = "https://dcdn-us.mitiendanube.com/stores/006/563/772/products/base-preta-b1-7-cores-3c976d7a986830521217570087425776-1024-1024.webp" }
-            // Pode adicionar mais imagens aqui
         },
             name = new NomeMultilanguage
             {
@@ -207,15 +217,56 @@ public class NuvemShopController : ControllerBase
                 price = produto.Preco,
                 stock_management = true,
                 promotional_price = produto.PrecoPromocional,
-                stock = int.TryParse(produto.Estoque, out var estoque) ? estoque : 0,
-                 weight = produto.PesoKg,
-    height = produto.AlturaCm,
-    width  = produto.LarguraCm,
-    depth  = produto.ComprimentoCm,
-
+                stock = estoque,
+                weight = produto.PesoKg,
+                height = produto.AlturaCm,
+                width = produto.LarguraCm,
+                depth = produto.ComprimentoCm,
                 cost = produto.Custo,
-                sku = produto.Sku,
-                // Pode adicionar dimensões se disponível: height, width, depth
+                sku = produto.Sku + "-v1",
+                values = new List<string> { "Base Preta RGB 7 Cores" }
+            },
+            new Variant
+            {
+                price = produto.Preco,
+                stock_management = true,
+                promotional_price = produto.PrecoPromocional,
+                stock = estoque,
+                weight = produto.PesoKg,
+                height = produto.AlturaCm,
+                width = produto.LarguraCm,
+                depth = produto.ComprimentoCm,
+                cost = produto.Custo,
+                sku = produto.Sku + "-v2",
+                values = new List<string> { "Base Branca RGB 7 Cores" }
+            },
+            new Variant
+            {
+                price = produto.Preco,
+                stock_management = true,
+                promotional_price = produto.PrecoPromocional,
+                stock = estoque,
+                weight = produto.PesoKg,
+                height = produto.AlturaCm,
+                width = produto.LarguraCm,
+                depth = produto.ComprimentoCm,
+                cost = produto.Custo,
+                sku = produto.Sku + "-v3",
+                values = new List<string> { "Base Branca Luz Quente" }
+            },
+            new Variant
+            {
+                price = produto.Preco,
+                stock_management = true,
+                promotional_price = produto.PrecoPromocional,
+                stock = estoque,
+                weight = produto.PesoKg,
+                height = produto.AlturaCm,
+                width = produto.LarguraCm,
+                depth = produto.ComprimentoCm,
+                cost = produto.Custo,
+                sku = produto.Sku + "-v4",
+                values = new List<string> { "Base Preta Luz Quente" }
             }
         },
             tags = produto.Tags ?? ""

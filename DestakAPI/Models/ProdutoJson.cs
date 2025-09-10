@@ -12,16 +12,16 @@ namespace DestakAPI.Models
 
 
 
-    public class AttributeValue
+    public class AttributeModel
     {
-        public string value { get; set; } = "";
+        public string pt { get; set; }
     }
 
-    public class ProductAttribute
+    public class ProductAttributesModel
     {
-        public string name { get; set; } = "";
-        public List<AttributeValue> values { get; set; } = new();
+        public List<AttributeModel> Attributes { get; set; }
     }
+
 
     public class Brand
     {
@@ -58,7 +58,7 @@ namespace DestakAPI.Models
 
     public class ProductPostModel
     {
-        public List<ProductAttribute> attributes { get; set; } = new();
+        public List<AttributeModel> attributes { get; set; } = new();
 
         public List<int> categories { get; set; } = new();
         public DateTime? created_at { get; set; }
